@@ -22,11 +22,6 @@
 from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 
-ANSIBLE_METADATA = {'metadata_version': '1.1',
-                    'status': ['deprecated'],
-                    'supported_by': 'community'}
-
-
 DOCUMENTATION = '''
 ---
 module: ovirt_network_facts
@@ -59,11 +54,13 @@ EXAMPLES = '''
 # Examples don't contain auth parameter for simplicity,
 # look at ovirt_auth module to see how to reuse authentication:
 
-# Gather information about all networks which names start with C(vlan1):
-- ovirt_network_info:
+- name: Gather information about all networks which names start with vlan1
+  ovirt_network_info:
     pattern: name=vlan1*
   register: result
-- debug:
+
+- name: Print gathered information
+  debug:
     msg: "{{ result.ovirt_networks }}"
 '''
 

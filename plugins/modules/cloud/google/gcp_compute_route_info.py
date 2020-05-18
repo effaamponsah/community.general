@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_compute_route_info
@@ -96,7 +94,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a route
+- name: Get info on a route
   gcp_compute_route_info:
     filters:
     - name = test_object

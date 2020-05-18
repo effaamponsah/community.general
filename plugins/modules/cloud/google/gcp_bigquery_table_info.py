@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_bigquery_table_info
@@ -95,7 +93,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a table
+- name: Get info on a table
   gcp_bigquery_table_info:
     dataset: example_dataset
     project: test_project

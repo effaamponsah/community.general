@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_compute_subnetwork_info
@@ -101,7 +99,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a subnetwork
+- name: Get info on a subnetwork
   gcp_compute_subnetwork_info:
     region: us-west1
     filters:

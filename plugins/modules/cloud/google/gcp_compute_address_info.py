@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_compute_address_info
@@ -102,7 +100,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on an address
+- name: Get info on an address
   gcp_compute_address_info:
     region: us-west1
     filters:

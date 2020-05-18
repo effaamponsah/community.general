@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_compute_ssl_policy_info
@@ -96,7 +94,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a SSL policy
+- name: Get info on a SSL policy
   gcp_compute_ssl_policy_info:
     filters:
     - name = test_object

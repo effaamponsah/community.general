@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_tpu_node_info
@@ -95,7 +93,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a node
+- name: Get info on a node
   gcp_tpu_node_info:
     zone: us-central1-b
     project: test_project

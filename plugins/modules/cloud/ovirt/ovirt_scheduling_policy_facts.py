@@ -22,11 +22,6 @@
 from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 
-ANSIBLE_METADATA = {'metadata_version': '1.1',
-                    'status': ['deprecated'],
-                    'supported_by': 'community'}
-
-
 DOCUMENTATION = '''
 ---
 module: ovirt_scheduling_policy_facts
@@ -61,11 +56,13 @@ EXAMPLES = '''
 # Examples don't contain auth parameter for simplicity,
 # look at ovirt_auth module to see how to reuse authentication:
 
-# Gather information about all scheduling policies with name InClusterUpgrade:
-- ovirt_scheduling_policy_info:
+- name: Gather information about all scheduling policies with name InClusterUpgrade
+  ovirt_scheduling_policy_info:
     name: InClusterUpgrade
   register: result
-- debug:
+
+- name: Print gathered information
+  debug:
     msg: "{{ result.ovirt_scheduling_policies }}"
 '''
 

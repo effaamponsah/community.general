@@ -8,12 +8,6 @@
 from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 
-ANSIBLE_METADATA = {
-    'metadata_version': '1.1',
-    'status': ['preview'],
-    'supported_by': 'community'
-}
-
 DOCUMENTATION = r'''
 ---
 module: nmcli
@@ -360,7 +354,7 @@ EXAMPLES = r'''
   remote_user: root
   tasks:
 
-  - name: install needed network manager libs
+  - name: Install needed network manager libs
     package:
       name:
         - NetworkManager-libnm

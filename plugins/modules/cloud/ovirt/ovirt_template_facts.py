@@ -22,11 +22,6 @@
 from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 
-ANSIBLE_METADATA = {'metadata_version': '1.1',
-                    'status': ['deprecated'],
-                    'supported_by': 'community'}
-
-
 DOCUMENTATION = '''
 ---
 module: ovirt_template_facts
@@ -59,12 +54,13 @@ EXAMPLES = '''
 # Examples don't contain auth parameter for simplicity,
 # look at ovirt_auth module to see how to reuse authentication:
 
-# Gather information about all templates which names start with C(centos) and
-# belongs to data center C(west):
-- ovirt_template_info:
+- name: Gather information about all templates which names start with centos and belongs to data center west
+  ovirt_template_info:
     pattern: name=centos* and datacenter=west
   register: result
-- debug:
+
+- name: Print gathered information
+  debug:
     msg: "{{ result.ovirt_templates }}"
 '''
 

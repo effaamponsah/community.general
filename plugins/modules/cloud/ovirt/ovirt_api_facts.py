@@ -7,13 +7,6 @@ from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 
 
-ANSIBLE_METADATA = {
-    'metadata_version': '1.1',
-    'status': ['deprecated'],
-    'supported_by': 'community'
-}
-
-
 DOCUMENTATION = '''
 ---
 module: ovirt_api_facts
@@ -40,10 +33,12 @@ EXAMPLES = '''
 # Examples don't contain auth parameter for simplicity,
 # look at ovirt_auth module to see how to reuse authentication:
 
-# Gather information oVirt API:
-- ovirt_api_info:
+- name: Gather information oVirt API
+  ovirt_api_info:
   register: result
-- debug:
+
+- name: Print gathered information
+  debug:
     msg: "{{ result.ovirt_api }}"
 '''
 

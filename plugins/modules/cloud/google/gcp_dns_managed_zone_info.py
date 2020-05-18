@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_dns_managed_zone_info
@@ -94,7 +92,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a managed zone
+- name: Get info on a managed zone
   gcp_dns_managed_zone_info:
     dns_name: test.somewild2.example.com.
     project: test_project

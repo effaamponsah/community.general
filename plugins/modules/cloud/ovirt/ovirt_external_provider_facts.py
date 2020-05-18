@@ -22,11 +22,6 @@
 from __future__ import absolute_import, division, print_function
 __metaclass__ = type
 
-ANSIBLE_METADATA = {'metadata_version': '1.1',
-                    'status': ['deprecated'],
-                    'supported_by': 'community'}
-
-
 DOCUMENTATION = '''
 ---
 module: ovirt_external_provider_facts
@@ -62,12 +57,14 @@ EXAMPLES = '''
 # Examples don't contain auth parameter for simplicity,
 # look at ovirt_auth module to see how to reuse authentication:
 
-# Gather information about all image external providers named C<glance>:
-- ovirt_external_provider_info:
+- name: Gather information about all image external providers named glance
+  ovirt_external_provider_info:
     type: os_image
     name: glance
   register: result
-- debug:
+
+- name: Print gathered information
+  debug:
     msg: "{{ result.ovirt_external_providers }}"
 '''
 

@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_spanner_database_info
@@ -100,7 +98,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a database
+- name: Get info on a database
   gcp_spanner_database_info:
     instance: "{{ instance }}"
     project: test_project

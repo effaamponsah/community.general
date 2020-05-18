@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_compute_instance_group_info
@@ -101,7 +99,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on an instance group
+- name: Get info on an instance group
   gcp_compute_instance_group_info:
     zone: us-central1-a
     filters:

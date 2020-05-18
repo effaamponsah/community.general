@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_compute_forwarding_rule_info
@@ -102,7 +100,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a forwarding rule
+- name: Get info on a forwarding rule
   gcp_compute_forwarding_rule_info:
     region: us-west1
     filters:

@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_compute_region_disk_info
@@ -101,7 +99,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a region disk
+- name: Get info on a region disk
   gcp_compute_region_disk_info:
     region: us-central1
     filters:

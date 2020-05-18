@@ -25,8 +25,6 @@ __metaclass__ = type
 # Documentation
 ################################################################################
 
-ANSIBLE_METADATA = {'metadata_version': '1.1', 'status': ["preview"], 'supported_by': 'community'}
-
 DOCUMENTATION = '''
 ---
 module: gcp_dns_resource_record_set_info
@@ -97,7 +95,7 @@ notes:
 '''
 
 EXAMPLES = '''
-- name: get info on a resource record set
+- name: Get info on a resource record set
   gcp_dns_resource_record_set_info:
     managed_zone: "{{ managed_zone }}"
     project: test_project
